@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+  font-size: 15px;
+  background-color: var(--Very-Light-Gray);
+}
+
+.main {
+  width: 80%;
+  margin: 10% auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .main {
+    margin: 2% auto;
+  }
+}
+
+.sub {
+  font-weight: 200;
+  color: var(--Very-Dark-Blue);
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
+}
+
+.heading {
+  color: var(--Very-Dark-Blue);
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
+}
+
+.desc {
+  color: var(--Grayish-Blue);
+  margin: 30px 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .desc {
+    width: 45%;
+    margin: auto;
+  }
+}
+
+.card-section {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 20px;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .card-section {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card-section {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+        grid-template-areas: ". team ." "supervisor team calculator" "supervisor karma calculator" ". karma .";
+  }
+}
+
+.card {
+  text-align: left;
+  background-color: #fff;
+  -webkit-box-shadow: 4px 12px 16px -4px rgba(84, 158, 242, 0.3);
+          box-shadow: 4px 12px 16px -4px rgba(84, 158, 242, 0.3);
+  padding: 15px;
+  border-radius: 7px;
+}
+
+.card h4 {
+  color: var(--Very-Dark-Blue);
+  font-size: 1.2rem;
+}
+
+.card p {
+  color: var(--Grayish-Blue);
+  width: 95%;
+}
+
+.card img {
+  float: right;
+  margin: 25px;
+  margin-top: 50px;
+}
+
+.supervisor {
+  border-top: 4px solid var(--Cyan);
+}
+
+@media screen and (min-width: 1440px) {
+  .supervisor {
+    grid-area: supervisor;
+  }
+}
+
+.team-builder {
+  border-top: 4px solid var(--Red);
+}
+
+@media screen and (min-width: 1440px) {
+  .team-builder {
+    grid-area: team;
+  }
+}
+
+.karma {
+  border-top: 4px solid var(--Orange);
+}
+
+@media screen and (min-width: 1440px) {
+  .karma {
+    grid-area: karma;
+  }
+}
+
+.calculator {
+  border-top: 4px solid var(--Blue);
+}
+
+@media screen and (min-width: 1440px) {
+  .calculator {
+    grid-area: calculator;
+  }
+}
+/*# sourceMappingURL=style.css.map */
